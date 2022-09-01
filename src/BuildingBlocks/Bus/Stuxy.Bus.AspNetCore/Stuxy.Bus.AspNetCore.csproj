@@ -12,7 +12,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Stuxy.Bus.Notifier" Version="0.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stuxy.Bus.Notifier\Stuxy.Bus.Notifier.csproj" />
+    <ProjectReference Include="..\Stuxy.Bus\Stuxy.Bus.csproj" />
   </ItemGroup>
 
 </Project>

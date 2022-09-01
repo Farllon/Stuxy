@@ -12,7 +12,11 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.2.0" />
-    <PackageReference Include="Stuxy.Bus.Notifier" Version="0.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stuxy.Bus.Notifier\Stuxy.Bus.Notifier.csproj" />
+    <ProjectReference Include="..\Stuxy.Bus\Stuxy.Bus.csproj" />
   </ItemGroup>
 
 </Project>

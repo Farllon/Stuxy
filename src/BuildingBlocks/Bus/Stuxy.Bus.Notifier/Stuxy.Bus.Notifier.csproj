@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <Title>Stuxy Bus Notifier</Title>
+	  <Authors>Farllon Costa</Authors>
+	  <Company>FACC Solutions</Company>
+	  <Product>Stuxy</Product>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stuxy.Bus" Version="0.0.1" />
+  </ItemGroup>
+
+</Project>

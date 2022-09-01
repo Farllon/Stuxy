@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  sql-server-db:
+    container_name: sql-server-db
+    networks:
+      - environment
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "123Testando!"
+      ACCEPT_EULA: "Y"
+  
+  stuxy.identity.api:
+    image: ${DOCKER_REGISTRY-}stuxyidentityapi
+    build:
+      context: ../src/Identity
+      dockerfile: src/Stuxy.Identity.API/Dockerfile
+    networks:
+        - environment
+    depends_on:
+        - sql-server-db
+
+networks:
+  environment:
+    driver: bridge
